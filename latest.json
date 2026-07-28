@@ -1,6 +1,6 @@
 {
   "version": "1.1.1",
-  "dmgUrl": "https://github.com/Hendiaome/Claude-PTY/releases/Claude-PTY-Manager-1.1.1-arm64.dmg",
+  "dmgUrl": "https://github.com/Hendiaome/Claude-PTY/releases/download/v1.1.1/Claude-PTY-Manager-1.1.1-arm64.dmg",
   "releaseNotes": "新增桌面悬浮状态展示；优化锁屏后终端乱码问题；新增结构化会话（尝鲜）；修复结构化工具卡片显示异常",
   "mandatory": false
 }

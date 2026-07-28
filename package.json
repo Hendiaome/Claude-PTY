@@ -1,0 +1,73 @@
+{
+  "name": "claude-pty-manager",
+  "version": "1.1.1",
+  "description": "A macOS desktop manager for Claude Code PTY sessions.",
+  "productName": "Claude PTY Manager",
+  "author": "Hendiaome",
+  "license": "MIT",
+  "homepage": "https://github.com/Hendiaome/Claude-PTY#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hendiaome/Claude-PTY.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Hendiaome/Claude-PTY/issues"
+  },
+  "main": "out/main/index.js",
+  "private": true,
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "preview": "electron-vite preview",
+    "pack:mac": "bash scripts/package-mac.sh app",
+    "dist:mac": "bash scripts/package-mac.sh dist",
+    "rebuild:native": "electron-rebuild -f -w node-pty",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "dependencies": {
+    "@xterm/addon-fit": "^0.11.0",
+    "@xterm/addon-search": "^0.16.0",
+    "@xterm/xterm": "^6.0.0",
+    "lucide-react": "^1.23.0",
+    "node-pty": "^1.1.0",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  },
+  "devDependencies": {
+    "@electron/rebuild": "^4.1.0",
+    "@types/node": "^26.1.0",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.2.0",
+    "electron": "^43.0.0",
+    "electron-builder": "^26.0.12",
+    "electron-vite": "^5.0.0",
+    "typescript": "^6.0.3",
+    "vite": "^7.3.6"
+  },
+  "build": {
+    "appId": "io.github.hendiaome.claude-pty",
+    "productName": "Claude PTY Manager",
+    "directories": {
+      "output": "release"
+    },
+    "artifactName": "Claude-PTY-Manager-${version}-${arch}.${ext}",
+    "files": [
+      "out/**/*",
+      "package.json"
+    ],
+    "asarUnpack": [
+      "**/*.node"
+    ],
+    "mac": {
+      "category": "public.app-category.developer-tools",
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    }
+  }
+}

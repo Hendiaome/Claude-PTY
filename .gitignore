@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+
+# Build output
+out/
+dist/
+dist-electron/
+release/
+
+# Electron builder artifacts
+*.dmg
+*.zip
+*.blockmap
+
+# Local IDE and OS files
+.idea/
+.DS_Store
+
+# Logs and local config
+*.log
+*.local
+.env
+.env.*
+!.env.example
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Local signing credentials
+*.cer
+*.key
+*.p12
+*.pem
+*.provisionprofile
+
+# Coverage
+coverage/
+.learnings/

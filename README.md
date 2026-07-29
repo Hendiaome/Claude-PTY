@@ -1,5 +1,7 @@
 # Claude PTY Manager
 
+A macOS desktop workspace for Claude Code: native PTY terminal, multi-project session manager, floating status window, and experimental structured output.
+
 Claude PTY Manager 是一个面向 macOS 的 Claude Code 桌面会话管理器。它通过 PTY 托管原生 Claude Code，同时提供项目、会话、终端和运行状态管理能力。
 
 > 本项目是非官方第三方工具，与 Anthropic 不存在隶属、授权或背书关系。Claude、Claude Code 及相关名称归其各自权利人所有。
